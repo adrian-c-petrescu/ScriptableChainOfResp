@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A5D378B-D362-42C2-9AEB-ABCD90A3361B}</ProjectGuid>
+    <ProjectGuid>{CB014BDB-5DB1-4ABE-ABE8-6852A4E9E4F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AbstractDeserWithVisitor.Tests</RootNamespace>
-    <AssemblyName>AbstractDeserWithVisitor.Tests</AssemblyName>
+    <RootNamespace>AbstractDeserialization.Tests</RootNamespace>
+    <AssemblyName>AbstractDeserialization.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,24 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PipelineWithVisitorTests.cs" />
+    <Compile Include="PipelineTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbstractDeserWithVisitor.Bl\AbstractDeserWithVisitor.Bl.csproj">
-      <Project>{9d41c734-fc55-426d-a600-591095763a04}</Project>
-      <Name>AbstractDeserWithVisitor.Bl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AbstractDeserWithVisitor.Model\AbstractDeserWithVisitor.Model.csproj">
-      <Project>{c3ff68e1-7616-47f8-8101-c7bfa9ce4a74}</Project>
-      <Name>AbstractDeserWithVisitor.Model</Name>
-    </ProjectReference>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <ProjectReference Include="..\AbstractDeserialization\AbstractDeserialization.csproj">
+      <Project>{3a97e35c-7095-4b21-8e70-4d169682d589}</Project>
+      <Name>AbstractDeserialization</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
